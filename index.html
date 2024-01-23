@@ -4,9 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Responsive Navbar html css javascript</title>
 </head>
 <body>
-    <h1>amar sonar bangla</h1>
+   <header>
+    <div class="logo">Soft Landing</div>
+    <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+    <nav class="nav-bar">
+        <ul>
+            <li><a href="" class="active">Home</a></li>
+            <li><a href="">Features</a></li>
+            <li><a href="">Pricing</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+    </nav>
+   </header>
+   <script>
+        const hamburger = document.querySelector(".hamburger");
+        hamburger.onclick = function(){
+           const navBar = document.querySelector(".nav-bar");
+            navBar.classList.toggle("active");
+        }
+   </script>
 </body>
 </html>
