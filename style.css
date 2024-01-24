@@ -70,8 +70,11 @@ header{
     }
 
     .nav-bar{
-        height: 0px;
+        /* the navbar is hidden by default by assigning the height 0px. */
+        height: 0px;  
         position: absolute;
+        /* the navbar is down from top 80px because 
+        header is situated at top 80px with some basic logo and hamburger menu bar. */
         top: 80px;
         left: 0;
         right: 0;
@@ -81,14 +84,21 @@ header{
         overflow: hidden;
     }
     .nav-bar.active{
+         /* the hidden navbar has been visible here conditionally by assigning the height 450px.
+         It will be happened when you click the hamburger menu then active class will be 
+         added to the nav-bar. otherwise the navbar will be hidden by default.  */
         height: 450px;
     }
     .nav-bar ul{
+        /* When navbar is hidden then the ul also be hidden because ul is child of navbar
+        that means the ul is situated in inner position of navbar.
+        on the other hand when navbar is visible the ul also be visible. */
         display: block;
         width: fit-content;
         margin: 80px auto 0px auto;
         text-align: center;
         transition: 0.5s;
+        /* the opacity:0; is less important */
         opacity: 0;
     }
     .nav-bar.active ul{
